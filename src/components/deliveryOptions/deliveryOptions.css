@@ -1,0 +1,20 @@
+.delivery-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.delivery-options label {
+  width: 25%;
+  font-size: 16px;
+  color: #333;
+}
+
+.delivery-options select {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

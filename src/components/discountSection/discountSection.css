@@ -1,0 +1,29 @@
+
+.discount-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.discount-section input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.discount-section button {
+  width: 25%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.discount-section button:hover {
+  background-color: #0056b3;
+}
