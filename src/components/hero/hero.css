@@ -9,7 +9,12 @@
     padding-top: 5px;
     padding-bottom: -50px;
     border-bottom: 5px solid #000;
-    
+}
+
+.hero-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-el{
