@@ -1,46 +1,58 @@
-import React, { Profiler } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FileSearch, ShoppingCart } from "phosphor-react";
 import "./navbar.css";
 import searchIcon from "../../assets/Search_alt.svg";
 import cartIcon from "../../assets/Basket_alt_3.svg";
 import profileIcon from "../../assets/User_cicrle.svg";
+import hamburgerIcon from "../../assets/Sort.svg";
+import closeIcon from "../../assets/Close_square.svg";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
         <p className="logo-el">YT Bridal</p>
       </div>
 
-      <div className="nav-menu">
+      <div className={`nav-menu ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={toggleMenu}>Home</Link>
           </li>
           <li>
-            <Link to="/dress">Dress</Link>
+            <Link to="/dress" onClick={toggleMenu}>Dress</Link>
           </li>
           <li>
-            <Link to="/shoes">Shoes</Link>
+            <Link to="/shoes" onClick={toggleMenu}>Shoes</Link>
           </li>
           <li>
-            <Link to="/headgears">Headgears</Link>
+            <Link to="/headgears" onClick={toggleMenu}>Headgears</Link>
           </li>
           <li>
-            <Link to="/bouquet">Bouquet</Link>
+            <Link to="/bouquet" onClick={toggleMenu}>Bouquet</Link>
           </li>
           <li>
-            <Link to="/fan">Fan</Link>
+            <Link to="/fan" onClick={toggleMenu}>Fan</Link>
           </li>
         </ul>
       </div>
+
       <div className="nav-icons">
-        <img src={searchIcon}></img>
+        <img src={searchIcon} alt="search" />
         <Link to="/cart">
-          <img src={cartIcon}></img>
+          <img src={cartIcon} alt="cart" />
         </Link>
-        <img src={profileIcon}></img>
+        <img src={profileIcon} alt="profile" />
+      </div>
+
+      <div className="hamburger" onClick={toggleMenu}>
+        <img src={isOpen ? closeIcon : hamburgerIcon} alt="menu icon" />
       </div>
     </div>
   );

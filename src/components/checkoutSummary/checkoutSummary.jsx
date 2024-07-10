@@ -8,7 +8,9 @@ const CheckoutSummary = ({ totalAmount }) => {
         <p>Total</p>
         <p>N{totalAmount}</p>
       </div>
+
       <button className="checkout-button">Proceed to Checkout</button>
+      
     </div>
   );
 }
