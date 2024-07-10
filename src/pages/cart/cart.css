@@ -25,3 +25,38 @@
   width: 100%;
   margin-top: 20px;
 }
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .cart {
+    padding: 30px;
+  }
+
+  .cart h1 {
+    font-size: 20px;
+  }
+
+  .discount-section,
+  .delivery-options,
+  .checkout-summary {
+    margin-top: 15px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .cart {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cart h1 {
+    font-size: 18px;
+  }
+
+  .discount-section,
+  .delivery-options,
+  .checkout-summary {
+    margin-top: 10px;
+  }
+}
