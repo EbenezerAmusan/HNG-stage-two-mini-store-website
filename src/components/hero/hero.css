@@ -1,6 +1,6 @@
 .hero-container{
     width: 100%;
-    height: calc(100vh-80px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,10 +10,9 @@
 .hero-image{
     object-fit: cover;
     object-position: center;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     padding-top: 10px;
-    z-index: -5;
 }
 
 .hero-el{
